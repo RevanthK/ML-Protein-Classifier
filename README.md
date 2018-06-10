@@ -10,13 +10,9 @@ Documentation
 1. Download two datasets from the Uniprot database (https://www.uniprot.org), (a) all eukaryotic protein sequences and (b) all prokaryotic sequences
 
 
-to download all eukaryotic protein sequences:
+To download all eukaryotic protein sequences: uniparc proteome:(taxonomy:"Eukaryota [2759]")
 
-uniparc proteome:(taxonomy:"Eukaryota [2759]")
-
-to download all prokaryotic protein sequences:
-
-uniparc proteome:(taxonomy:"Eukaryota [2759]")
+To download all prokaryotic protein sequences: uniparc proteome:(taxonomy:"Eukaryota [2759]")
 
 
 
