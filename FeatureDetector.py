@@ -3,6 +3,8 @@ from Bio.Seq import Seq
 #from Bio.Alphabet import IUPAC
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
 
+Pro_count=0
+Euk_count=0
 
 with open ("compiled.csv", "w") as compiled:
 	with open("Arch/Arch.csv", "w") as output:
@@ -19,6 +21,7 @@ with open ("compiled.csv", "w") as compiled:
 			for amino_acid in analysed_seq.get_amino_acids_percent():
 				compiled.write(str(analysed_seq.get_amino_acids_percent()[amino_acid]) + ",")
 			compiled.write("P" + "\n")
+			Pro_count += 1
 
 	with open("Pro/Pro.csv", "w") as output:
 		output.write("Length,A,C,E,D,G,F,I,H,K,M,L,N,Q,P,S,R,T,W,V,Y,Class\n")
@@ -33,6 +36,7 @@ with open ("compiled.csv", "w") as compiled:
 			for amino_acid in analysed_seq.get_amino_acids_percent():
 				compiled.write(str(analysed_seq.get_amino_acids_percent()[amino_acid]) + ",")
 			compiled.write("P" + "\n")
+			Pro_count += 1
 
 	with open("euk/Euk.csv", "w") as output:
 		output.write("Length,A,C,E,D,G,F,I,H,K,M,L,N,Q,P,S,R,T,W,V,Y,Class\n")
@@ -47,3 +51,7 @@ with open ("compiled.csv", "w") as compiled:
 			for amino_acid in analysed_seq.get_amino_acids_percent():
 				compiled.write(str(analysed_seq.get_amino_acids_percent()[amino_acid]) + ",")
 			compiled.write("E" + "\n")
+			Euk_count += 1
+print("Prokaryote count: " + str(Pro_count))
+print("Eukaryote count: " + str(Euk_count))
+
